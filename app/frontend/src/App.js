@@ -5,6 +5,7 @@ import Leaderboard from './pages/Leaderboard';
 import Games from './pages/Games';
 import Login from './pages/Login';
 import './styles/app.css';
+// pra fazer o primeiro commit
 
 function App() {
   return (
