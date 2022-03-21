@@ -12,10 +12,6 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         foreignKey: true,
-        references: {
-          model: 'Clubs',
-          key: 'id',
-        },
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE',
       },
@@ -27,10 +23,6 @@ module.exports = {
         type: Sequelize.INTEGER,
         allowNull: false,
         foreignKey: true,
-        references: {
-          model: 'Clubs',
-          key: 'id',
-        },
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE',
       },
