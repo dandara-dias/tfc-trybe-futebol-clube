@@ -7,7 +7,6 @@ const getUserLogin = async (email: string, password: string) => {
   const authLogin = validateLogin(email, password);
   const getUser = await User.findOne({ where: { email } });
   const passwordMatch = await bcrypt.compare(password, getUser!.password);
-
   const token = tokenGenerate(getUser);
 
   if (authLogin) {

@@ -12,7 +12,7 @@ const validateEmail = (email: string) => {
     return {
       status: 401,
       message: 'O email deve ter o formato email@email.com',
-    }
+    };
   }
 }
 
