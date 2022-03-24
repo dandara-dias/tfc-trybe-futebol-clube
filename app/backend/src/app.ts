@@ -1,4 +1,5 @@
 import * as express from 'express';
+import loginController from './Controllers/loginController';
 
 class App {
   public app: express.Express;
@@ -25,7 +26,10 @@ class App {
 
   // ...
   public start(PORT: string | number):void {
-    // ...
+    this.app.use(express.json());
+
+    this.app.post('/login', loginController);
+
     this.app.listen(PORT, () => {
       console.log(`PORT ${PORT}`);
     });
