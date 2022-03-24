@@ -4,14 +4,14 @@ const validateEmail = (email: string) => {
   if (!email) {
     return {
       status: 401,
-      message: 'O campo "email" é obrigatório',
+      message: 'Incorrect email or password',
     }
   }
 
   if (emailRegex.test(email) === false) {
     return {
       status: 401,
-      message: 'O email deve ter o formato email@email.com',
+      message: 'Incorrect email or password',
     };
   }
 }

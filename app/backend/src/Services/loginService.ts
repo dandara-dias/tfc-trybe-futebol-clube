@@ -1,24 +1,19 @@
+import * as bcrypt from 'bcryptjs';
 import { tokenGenerate } from '../auth/token';
 import validateLogin from '../auth/loginValidation';
 import User from '../database/models/User';
-import * as bcrypt from 'bcryptjs';
 
-const getUserLogin = async (email: string, password: string) => {
-  const authLogin = validateLogin(email, password);
-  const getUser = await User.findOne({ where: { email } });
-  const passwordMatch = await bcrypt.compare(password, getUser!.password);
+const getSerializedUser = (user: any) => ({
+  id: user.id,
+  username: user.username,
+  role: user.role,
+  email: user.email,
+});
+
+const returnUser = async (password: string, getUser: any) => {
+  const passwordMatch = await bcrypt.compare(password, getUser.password);
+  const user = getSerializedUser(getUser);
   const token = tokenGenerate(getUser);
-
-  if (authLogin) {
-    return authLogin;
-  }
-
-  const user = {
-    id: getUser?.id,
-    username: getUser?.username,
-    role: getUser?.role,
-    email: getUser?.email,
-  }
 
   if (passwordMatch) {
     return {
@@ -27,8 +22,33 @@ const getUserLogin = async (email: string, password: string) => {
         token,
       },
       status: 200,
-    }
+    };
   }
-}
+
+  return {
+    message: 'Not found',
+    status: 401,
+  };
+};
+
+const getUserLogin = async (email: string, password: string):
+Promise<{ message: any; status: number; }> => {
+  const authLogin = validateLogin(email, password);
+  const getUser = await User.findOne({ where: { email } });
+  console.log(getUser);
+
+  if (getUser) {
+    return returnUser(password, getUser);
+  }
+
+  if (authLogin) {
+    return authLogin;
+  }
+
+  return {
+    message: 'Not found',
+    status: 401,
+  };
+};
 
 export default getUserLogin;

@@ -6,7 +6,7 @@ const loginController = async (req: Request, res: Response) => {
 
   const getUser = await getUserLogin(email, password);
 
-  res.status(getUser!.status).json(getUser!.message);
+  res.status(getUser.status).json(getUser.message);
 };
 
 export default loginController;
