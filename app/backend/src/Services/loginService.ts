@@ -35,14 +35,13 @@ const getUserLogin = async (email: string, password: string):
 Promise<{ message: any; status: number; }> => {
   const authLogin = validateLogin(email, password);
   const getUser = await User.findOne({ where: { email } });
-  console.log(getUser);
-
-  if (getUser) {
-    return returnUser(password, getUser);
-  }
 
   if (authLogin) {
     return authLogin;
+  }
+
+  if (getUser) {
+    return returnUser(password, getUser);
   }
 
   return {
