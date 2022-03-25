@@ -11,7 +11,7 @@ chai.use(chaiHttp);
 
 const { expect } = chai;
 
-describe('Requisito 5', () => {
+describe('Requisitos 5 e 7', () => {
   /**
    * Exemplo do uso de stubs com tipos
    */
@@ -66,5 +66,17 @@ describe('Requisito 5', () => {
       });
 
     expect(chaiHttpResponse.status).to.equal(200);
+  });
+
+  it('O avaliador verificará se fazer o login com um email incorreto retornará status não-autorizado', async () => {
+    chaiHttpResponse = await chai
+      .request(app)
+      .post('/login')
+      .send({
+        email: 'admin.com',
+        password: 'secret_admin',
+      });
+
+    expect(chaiHttpResponse.status).to.equal(401);
   });
 });
