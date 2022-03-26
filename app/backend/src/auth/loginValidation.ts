@@ -4,7 +4,7 @@ const validateEmail = (email: string) => {
   if (!email) {
     return {
       status: 401,
-      message: 'Incorrect email or password',
+      message: 'All fields must be filled',
     }
   }
 

@@ -26,7 +26,7 @@ const returnUser = async (password: string, getUser: any) => {
   }
 
   return {
-    message: 'Not found',
+    message: 'Incorrect email or password',
     status: 401,
   };
 };
