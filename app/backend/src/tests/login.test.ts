@@ -103,4 +103,20 @@ describe('Requisitos 5, 7 e 8', () => {
         throw err;
       });
   });
+
+  it('O avaliador verificará se ao tentar fazer o login sem um email retornará status não-autorizado', async () => {
+    chai
+      .request(app)
+      .post('/login')
+      .send({
+        email: '',
+        password: 'secret_admin',
+      })
+      .then(function (res){
+        expect(res).to.have.status(401);
+      })
+      .catch(function (err) {
+        throw err;
+      });
+  });
 });
