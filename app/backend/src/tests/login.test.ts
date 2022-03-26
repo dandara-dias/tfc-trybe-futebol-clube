@@ -11,7 +11,7 @@ chai.use(chaiHttp);
 
 const { expect } = chai;
 
-describe('Requisitos 5 e 7', () => {
+describe('Requisitos 5, 7 e 8', () => {
   /**
    * Exemplo do uso de stubs com tipos
    */
@@ -57,26 +57,50 @@ describe('Requisitos 5 e 7', () => {
   });
 
   it('O avaliador verificará se é possível fazer o login com dados corretos', async () => {
-    chaiHttpResponse = await chai
+    chai
       .request(app)
       .post('/login')
       .send({
-        email: 'admin@admin.com',
-        password: 'secret_admin',
+        'email': 'admin@admin.com',
+        'password': 'secret_admin',
+      })
+      .then(function (res){
+        expect(res).to.have.status(200);
+      })
+      .catch(function (err) {
+        throw err;
       });
-
-    expect(chaiHttpResponse.status).to.equal(200);
   });
 
   it('O avaliador verificará se fazer o login com um email incorreto retornará status não-autorizado', async () => {
-    chaiHttpResponse = await chai
+    chai
       .request(app)
       .post('/login')
       .send({
         email: 'admin.com',
         password: 'secret_admin',
+      })
+      .then(function (res){
+        expect(res).to.have.status(401);
+      })
+      .catch(function (err) {
+        throw err;
       });
+  });
 
-    expect(chaiHttpResponse.status).to.equal(401);
+  it('O avaliador verificará se fazer o login com uma senha incorreta retornará status não-autorizado', async () => {
+    chai
+      .request(app)
+      .post('/login')
+      .send({
+        email: 'admin@admin.com',
+        password: 'senha_invalida',
+      })
+      .then(function (res){
+        expect(res).to.have.status(401);
+      })
+      .catch(function (err) {
+        throw err;
+      });
   });
 });
