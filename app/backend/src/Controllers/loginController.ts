@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import getUserLogin from '../Services/loginService';
+import { getUserLogin, getRole } from '../Services/loginService';
 
 const loginController = async (req: Request, res: Response) => {
   const { email, password } = req.body;
@@ -13,4 +13,15 @@ const loginController = async (req: Request, res: Response) => {
   res.status(getUser.status).json({ message: getUser.message });
 };
 
-export default loginController;
+const roleController = async (req: Request, res: Response) => {
+  const token: any = req.headers.authorization;
+
+  const role = await getRole(token);
+
+  res.status(role.status).json(role.message);
+}
+
+export {
+  loginController,
+  roleController,
+};

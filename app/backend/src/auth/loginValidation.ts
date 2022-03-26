@@ -20,7 +20,7 @@ const validatePassword = (password: string) => {
   if (!password) {
     return {
       status: 401,
-      message: 'O campo "password é obrigatório',
+      message: 'All fields must be filled',
     }
   }
 

@@ -1,5 +1,5 @@
 import * as express from 'express';
-import loginController from './Controllers/loginController';
+import { loginController, roleController } from './Controllers/loginController';
 
 class App {
   public app: express.Express;
@@ -29,6 +29,7 @@ class App {
     this.app.use(express.json());
 
     this.app.post('/login', loginController);
+    this.app.get('/login/validate', roleController);
 
     this.app.listen(PORT, () => {
       console.log(`PORT ${PORT}`);

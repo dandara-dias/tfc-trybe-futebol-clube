@@ -1,5 +1,5 @@
 import * as bcrypt from 'bcryptjs';
-import { tokenGenerate } from '../auth/token';
+import { tokenGenerate, tokenValidation } from '../auth/token';
 import validateLogin from '../auth/loginValidation';
 import User from '../database/models/User';
 
@@ -50,4 +50,16 @@ Promise<{ message: any; status: number; }> => {
   };
 };
 
-export default getUserLogin;
+const getRole = async (token: string) => {
+  const role: any = await tokenValidation(token);
+
+  return {
+    message: role.payload.role,
+    status: 200,
+  }
+}
+
+export {
+  getUserLogin,
+  getRole,
+};
