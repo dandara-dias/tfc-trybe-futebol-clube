@@ -9,4 +9,16 @@ const getClubs = async () => {
   };
 };
 
-export default getClubs;
+const getClubById = async (id: number) => {
+  const clubById = await Club.findOne({ where: { id } });
+
+  return {
+    message: clubById,
+    status: 200,
+  };
+};
+
+export {
+  getClubs,
+  getClubById,
+};

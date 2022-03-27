@@ -1,5 +1,5 @@
 import * as express from 'express';
-import clubController from './Controllers/clubController';
+import { clubController, clubId } from './Controllers/clubController';
 import { loginController, roleController } from './Controllers/loginController';
 
 class App {
@@ -33,6 +33,7 @@ class App {
     this.app.get('/login/validate', roleController);
 
     this.app.get('/clubs', clubController);
+    this.app.get('/clubs/:id', clubId);
 
     this.app.listen(PORT, () => {
       console.log(`PORT ${PORT}`);
