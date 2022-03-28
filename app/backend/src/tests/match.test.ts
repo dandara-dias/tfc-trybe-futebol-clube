@@ -93,4 +93,26 @@ describe('Requisito 18', () => {
         throw err;
       });
   });
+
+  it('Verifica que é possível salvar uma partida com o status de inProgress como true no banco de dados', async () => {
+    const newMatch = {
+      "homeTeam": 16,
+      "awayTeam": 8,
+      "homeTeamGoals": 2,
+      "awayTeamGoals": 2,
+      "inProgress": true
+    }
+
+    chai
+      .request(app)
+      .post('/matchs')
+      .send(newMatch)
+      .then(function (res){
+        expect(res).to.have.status(201);
+        expect(res.body).to.be.equal(newMatch);
+      })
+      .catch(function (err) {
+        throw err;
+      });
+  });
 });
