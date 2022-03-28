@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { getMatches, getInProgressMatches, getFinishedMatches } from '../Services/matchService';
+import { getMatches, getInProgressMatches, getFinishedMatches, postMatch } from '../Services/matchService';
 
 const matchController = async (req: Request, res: Response) => {
   const { inProgress } = req.query;
@@ -19,4 +19,23 @@ const matchController = async (req: Request, res: Response) => {
   res.status(getAllMatches.status).json(getAllMatches.message);
 };
 
-export default matchController;
+const matchPost = async (req: Request, res: Response) => {
+  const { homeTeam, awayTeam, homeTeamGoals, awayTeamGoals, inProgress } = req.body;
+
+  const matchRequisition = {
+    homeTeam,
+    awayTeam,
+    homeTeamGoals,
+    awayTeamGoals,
+    inProgress,
+  };
+
+  const newMatch = await postMatch(matchRequisition);
+
+  res.status(newMatch.status).json(newMatch.message);
+};
+
+export {
+  matchController,
+  matchPost,
+};

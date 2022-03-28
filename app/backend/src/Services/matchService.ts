@@ -73,8 +73,18 @@ const getFinishedMatches = async () => {
   }
 };
 
+const postMatch = async (requisition: any) => {
+  const newMatch = await Match.create(requisition);
+
+  return {
+    message: newMatch,
+    status: 201,
+  }
+};
+
 export {
   getMatches,
   getInProgressMatches,
   getFinishedMatches,
+  postMatch,
 };
