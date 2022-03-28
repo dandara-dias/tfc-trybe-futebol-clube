@@ -72,6 +72,38 @@ describe('Requisitos 5, 7, 9, 11 e 13', () => {
       });
   });
 
+  it('Quando os dados estão corretos, retorna user válido', async () => {
+    chai
+      .request(app)
+      .post('/login')
+      .send({
+        'email': 'admin@admin.com',
+        'password': 'secret_admin',
+      })
+      .then(function (res){
+        expect(res.body).to.have.property('email').to.be.equal('admin@admin.com');
+      })
+      .catch(function (err) {
+        throw err;
+      });
+  });
+
+  it('Quando os dados estão corretos, não retorna senha', async () => {
+    chai
+      .request(app)
+      .post('/login')
+      .send({
+        'email': 'admin@admin.com',
+        'password': 'secret_admin',
+      })
+      .then(function (res){
+        expect(res.body).not.to.have.property('password');
+      })
+      .catch(function (err) {
+        throw err;
+      });
+  });
+
   it('O avaliador verificará se fazer o login com um email incorreto retornará status não-autorizado', async () => {
     chai
       .request(app)
@@ -164,7 +196,7 @@ describe('Requisito 14', () => {
         authorization: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXlsb2FkIjp7ImlkIjoxLCJ1c2VybmFtZSI6IkFkbWluIiwicm9sZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbkBhZG1pbi5jb20iLCJwYXNzd29yZCI6IiQyYSQwOCR4aS5IeGsxY3pBTzBuWlIuLkIzOTN1MTBhRUQwUlExTjNQQUVYUTdIeHRMaktQRVpCdS5QVyJ9LCJpYXQiOjE2NDgzMjM2MDAsImV4cCI6MTY0ODkyODQwMH0.4yB0P7foau8rTAQsnU-sZcxniGlS4Nk-RY9JvO2aFCs'
       })
       .then(function (res){
-        expect(res).to.have.status(200);
+        expect(res.text).to.be.equal('admin');
       })
       .catch(function (err) {
         throw err;

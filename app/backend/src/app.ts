@@ -1,6 +1,7 @@
 import * as express from 'express';
 import { clubController, clubId } from './Controllers/clubController';
 import { loginController, roleController } from './Controllers/loginController';
+import matchController from './Controllers/matchController';
 
 class App {
   public app: express.Express;
@@ -34,6 +35,8 @@ class App {
 
     this.app.get('/clubs', clubController);
     this.app.get('/clubs/:id', clubId);
+
+    this.app.get('/matchs', matchController);
 
     this.app.listen(PORT, () => {
       console.log(`PORT ${PORT}`);
