@@ -1,4 +1,5 @@
 import * as express from 'express';
+import * as cors from 'cors';
 import { clubController, clubId } from './Controllers/clubController';
 import { loginController, roleController } from './Controllers/loginController';
 import { matchController, matchFinish, matchPost } from './Controllers/matchController';
@@ -11,6 +12,8 @@ class App {
     // ...
     this.app = express();
     this.config();
+
+    this.app.use(cors());
     // ...
   }
 
