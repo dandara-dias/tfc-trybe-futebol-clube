@@ -170,4 +170,25 @@ describe('Requisito 18', () => {
         throw err;
       });
   });  
+
+  it('Verifica que é possível atualizar partidas em andamento', async () => {
+    const newMatch = {
+      "homeTeam": 16,
+      "awayTeam": 8,
+      "homeTeamGoals": 2,
+      "awayTeamGoals": 2,
+      "inProgress": true
+    }
+
+    chai
+      .request(app)
+      .post('/matchs/1')
+      .send(newMatch)
+      .then(function (res){
+        expect(res).to.have.status(200);
+      })
+      .catch(function (err) {
+        throw err;
+      });
+  });  
 });
