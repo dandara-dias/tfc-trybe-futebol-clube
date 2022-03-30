@@ -2,7 +2,7 @@ import * as express from 'express';
 import * as cors from 'cors';
 import { clubController, clubId } from './Controllers/clubController';
 import { loginController, roleController } from './Controllers/loginController';
-import { matchController, matchFinish, matchPost } from './Controllers/matchController';
+import { matchController, matchFinish, matchPost, matchUpdate } from './Controllers/matchController';
 
 class App {
   public app: express.Express;
@@ -42,6 +42,7 @@ class App {
     this.app.get('/matchs', matchController);
     this.app.post('/matchs', matchPost);
     this.app.patch('/matchs/:id/finish', matchFinish);
+    this.app.patch('/matchs/:id', matchUpdate, matchFinish);
 
     this.app.listen(PORT, () => {
       console.log(`PORT ${PORT}`);

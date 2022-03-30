@@ -64,8 +64,18 @@ const matchFinish = async (req: Request, res: Response) => {
   res.status(200).json({ message: 'Finished' });
 };
 
+const matchUpdate = async (req: Request, res: Response) => {
+  const { id } = req.params;
+  const { homeTeamGoals, awayTeamGoals } = req.body;
+
+  await Match.update({ homeTeamGoals, awayTeamGoals }, { where: { id } });
+
+  res.status(200).json({ message: 'Updated' });
+};
+
 export {
   matchController,
   matchPost,
   matchFinish,
+  matchUpdate,
 };

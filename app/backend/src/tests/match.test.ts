@@ -115,4 +115,59 @@ describe('Requisito 18', () => {
         throw err;
       });
   });
+
+  it('Verifica que é possível salvar uma partida com o status de inProgress como false no banco de dados', async () => {
+    chai
+      .request(app)
+      .patch('/matchs/1/finish')
+      .then(function (res){
+        expect(res).to.have.status(200);
+        expect(res.body).to.have.property('message');
+      })
+      .catch(function (err) {
+        throw err;
+      });
+  });
+
+  it('Verifica que não é possível inserir uma partida com times iguais', async () => {
+    const newMatch = {
+      "homeTeam": 16,
+      "awayTeam": 16,
+      "homeTeamGoals": 2,
+      "awayTeamGoals": 2,
+      "inProgress": true
+    }
+
+    chai
+      .request(app)
+      .post('/matchs')
+      .send(newMatch)
+      .then(function (res){
+        expect(res).to.have.status(401);
+      })
+      .catch(function (err) {
+        throw err;
+      });
+  });
+  
+  it('Verifica que não é possível inserir uma partida com time que não existe na tabela clubs', async () => {
+    const newMatch = {
+      "homeTeam": 16,
+      "awayTeam": 4908,
+      "homeTeamGoals": 2,
+      "awayTeamGoals": 2,
+      "inProgress": true
+    }
+
+    chai
+      .request(app)
+      .post('/matchs')
+      .send(newMatch)
+      .then(function (res){
+        expect(res).to.have.status(401);
+      })
+      .catch(function (err) {
+        throw err;
+      });
+  });  
 });
