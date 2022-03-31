@@ -4,6 +4,7 @@ import { clubController, clubId } from './Controllers/clubController';
 import { loginController, roleController } from './Controllers/loginController';
 import { matchController, matchFinish, matchPost, matchUpdate } from './Controllers/matchController';
 import homeController from './Controllers/leaderHomeController';
+import awayController from './Controllers/leaderAwayController';
 
 class App {
   public app: express.Express;
@@ -46,6 +47,7 @@ class App {
     this.app.patch('/matchs/:id', matchUpdate, matchFinish);
 
     this.app.get('/leaderboard/home', homeController);
+    this.app.get('/leaderboard/away', awayController);
 
     this.app.listen(PORT, () => {
       console.log(`PORT ${PORT}`);
