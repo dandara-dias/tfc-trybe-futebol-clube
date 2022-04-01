@@ -1,6 +1,6 @@
 .common-header {
   align-items: center;
-  background: #002c33;
+  background: #171A21;
   bottom: 2.33%;
   display: flex;
   justify-content: space-between;
@@ -23,10 +23,10 @@
 
 .common-header h1 {
   align-items: center;
-  color: white;
+  color: #48A9A6;
   display: flex;
   flex-grow: 2;
-  font-family: Verdana , Tahoma , sans-serif;
+  font-family: 'Varela Round', sans-serif;
   font-size: 30px;
   font-style: normal;
   justify-content: center;
@@ -36,12 +36,12 @@
 
 .common-header a {
   align-items: center;
-  background: #2fc18c;
+  background: #7B6D8D;
   border-radius: 8px;
-  color: white;
+  color: #F8F8F8;
   display: flex;
-  font-family: Verdana , Tahoma , sans-serif;
-  font-size: 16px;
+  font-family: 'Hubballi', cursive;
+  font-size: 21px;
   font-style: normal;
   font-weight: 700;
   height: 40px;
@@ -53,7 +53,7 @@
 }
 
 .common-header a:hover {
-  background: #32a791;
+  background: #140052;
   transition: (
     200ms
     cubic-bezier(0.08, 0.52, 0.52, 1)
@@ -88,3 +88,6 @@
   margin-left: 5px;
   width: 24px;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');

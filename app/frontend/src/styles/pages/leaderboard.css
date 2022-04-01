@@ -17,9 +17,9 @@
   background: white;
   border: none;
   border-bottom: 1px solid #3d495c;
-  color: #c5c9ce;
+  color: #6E2594;
   cursor: pointer;
-  font-family: Verdana , Tahoma , sans-serif;
+  font-family: 'Ubuntu Mono', monospace;
   font-size: 14px;
   font-style: normal;
   height: 40px;
@@ -46,3 +46,5 @@
 .classification-handlers form button:hover {
   background: #002799;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital@1&display=swap');

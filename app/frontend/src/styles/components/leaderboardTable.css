@@ -14,8 +14,8 @@
 }
 
 .score-board-table thead tr th {
-  color: black;
-  font-family: Verdana , Tahoma , sans-serif;
+  color: #0267C1;
+  font-family: 'ABeeZee', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
@@ -24,9 +24,9 @@
 }
 
 .score-board-classification {
-  background: #023031;
+  background: #171219;
   border-radius: 8px;
-  color: white;
+  color: #E5D4ED;
   font-family: Verdana , Tahoma , sans-serif;
   font-size: 18px;
   font-style: normal;
@@ -38,10 +38,10 @@
 }
 
 .score-board-club-name {
-  background: #036b52;
+  background: #304B33;
   border-radius: 8px;
-  color: white;
-  font-family: Verdana , Tahoma , sans-serif;
+  color: #EDF7D2;
+  font-family: 'Nunito', sans-serif;
   font-size: 18px;
   font-style: normal;
   height: 43px;
@@ -101,3 +101,6 @@
   min-width: 87px;
   text-align: center;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
