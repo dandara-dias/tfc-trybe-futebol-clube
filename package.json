@@ -3,19 +3,15 @@
   "version": "1.0.0",
   "description": "Ao iniciar este projeto, você concorda com as diretrizes do Código de Ética e Conduta e do Manual da Pessoa Estudante da Trybe.",
   "main": "index.js",
-  "homepage": "https:\/\/dandara-dias.github.io/tfc-trybe-futebol-clube",
   "scripts": {
     "postinstall": "npm run install:apps",
-    "build": "./apps_install.sh",
     "install:apps": "./apps_install.sh",
     "pretest": "(cd ./app/backend && /bin/sh tsc_eval.sh)",
     "test": "jest -i --forceExit --verbose",
     "test:browser": "SHOW_BROWSER=true npm test",
     "test:debug": "DEBUG=true npm test",
     "compose:up": "(cd app && docker-compose up -d --build)",
-    "compose:down": "(cd app && docker-compose down --remove-orphans)",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "compose:down": "(cd app && docker-compose down --remove-orphans)"
   },
   "author": "Trybe",
   "devDependencies": {
