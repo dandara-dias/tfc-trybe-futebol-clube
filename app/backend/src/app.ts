@@ -51,7 +51,7 @@ class App {
     this.app.get('/leaderboard/away', awayController);
     this.app.get('/leaderboard', leaderboardController);
 
-    this.app.listen(PORT || 3001, () => {
+    this.app.listen(PORT, () => {
       console.log(`PORT ${PORT}`);
     });
   }
