@@ -5,6 +5,7 @@ import { loginController, roleController } from './Controllers/loginController';
 import { matchController, matchFinish, matchPost, matchUpdate } from './Controllers/matchController';
 import homeController from './Controllers/leaderHomeController';
 import awayController from './Controllers/leaderAwayController';
+import leaderboardController from './Controllers/leaderboardController';
 
 class App {
   public app: express.Express;
@@ -48,6 +49,7 @@ class App {
 
     this.app.get('/leaderboard/home', homeController);
     this.app.get('/leaderboard/away', awayController);
+    this.app.get('/leaderboard', leaderboardController);
 
     this.app.listen(PORT, () => {
       console.log(`PORT ${PORT}`);
