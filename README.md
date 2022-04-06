@@ -7,6 +7,7 @@
 <p align="center">
  <a href="#-sobre-o-projeto">Sobre</a> •
  <a href="#%EF%B8%8F-funcionalidades">Features</a> • 
+ <a href="#-demonstra%C3%A7%C3%A3o">Demonstração</a> • 
 </p>
 
 ## 💻 Sobre o projeto
@@ -36,3 +37,5 @@ Esta é uma aplicação dockerizada em Node.js + Typescript usando o pacote sequ
   - [x] ver uma lista da classificação geral dos times
   - [x] ver a classificação dos times quando mandantes
   - [x] ver a classificação dos times quando visitantes 
+
+## 🎨 Demonstração
