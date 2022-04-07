@@ -8,6 +8,7 @@
 • <a href="#-sobre-o-projeto">Sobre</a> •
  <a href="#%EF%B8%8F-funcionalidades">Features</a> • 
  <a href="#-demonstra%C3%A7%C3%A3o">Demonstração</a> • 
+ <a href="#-como-executar-o-projeto">Como executar</a> • 
 </p>
 
 ## 💻 Sobre o projeto
@@ -43,3 +44,18 @@ Esta é uma aplicação dockerizada em Node.js + Typescript usando o pacote sequ
 <p align="center">
   <img alt="TFC-app" title="#TFC" src="tfc.gif" width="800px">
 </p>
+
+## 🚀 Como executar o projeto
+
+Este projeto é divido em três partes:
+1. Backend (pasta app/backend) 
+2. Frontend (pasta app/frontend)
+3. DB (arquivo .sql na raíz do projeto)
+
+Tanto o Frontend quanto o Backend precisam que o MySQL esteja ativo para funcionar.
+
+### Pré-requisitos
+
+Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+[Git](https://git-scm.com), [Node.js](https://nodejs.org/en/). 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
