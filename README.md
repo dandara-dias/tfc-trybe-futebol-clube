@@ -9,7 +9,8 @@
  <a href="#%EF%B8%8F-funcionalidades">Features</a> • 
  <a href="#-demonstra%C3%A7%C3%A3o">Demonstração</a> • 
  <a href="#-como-executar-o-projeto">Como executar</a> • 
- <a href="#-tecnologias">Tecnologias</a> • 
+ <a href="#-tecnologias">Tecnologias</a> •
+ <a href="#%EF%B8%8F-autora">Autora</a> •
 </p>
 
 ## 💻 Sobre o projeto
@@ -98,9 +99,40 @@ $ npm run compose:up
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-#### **Website**  ([React](https://reactjs.org/)  +  [JavaScript](https://www.javascript.com/))
+#### **Website** ([React](https://reactjs.org/) + [JavaScript](https://www.javascript.com/))
 
 -   **[React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)**
 -   **[React Dom](https://pt-br.reactjs.org/docs/react-dom.html)**
 -   **[Axios](https://github.com/axios/axios)**
 -   **[React Scripts](https://www.npmjs.com/package/react-scripts)**
+
+> Veja o arquivo [package.json](https://github.com/dandara-dias/tfc-trybe-futebol-clube/blob/main/app/frontend/package.json)
+
+#### **Server** ([Node.js](https://nodejs.org/en/) + [TypeScript](https://www.typescriptlang.org/))
+
+-   **[Express](https://expressjs.com/)**
+-   **[CORS](https://expressjs.com/en/resources/middleware/cors.html)**
+-   **[BCrypt](https://www.npmjs.com/package/bcrypt)**
+-   **[JWT](https://jwt.io/)**
+-   **[Sequelize](https://sequelize.org/)**
+-   **[dotENV](https://github.com/motdotla/dotenv)**
+-   **[MySQL2](https://www.npmjs.com/package/mysql2)**
+
+> Veja o arquivo [package.json](https://github.com/dandara-dias/tfc-trybe-futebol-clube/blob/main/app/backend/package.json)
+
+#### **Utilitários**
+
+-   Editor:  **[Visual Studio Code](https://code.visualstudio.com/)**  → Extensions:  **[Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)**
+-   Markdown:  **[Rocketseat](https://blog.rocketseat.com.br/como-fazer-um-bom-readme/)**
+-   Teste de API:  **[Insomnia](https://insomnia.rest/)**
+-   Favicon:  **[Icons8](https://icons8.com.br/icons/set/favicon)**
+-   Paleta de cores: **[Coolors](https://coolors.co/)**
+-   Fontes:  **[Indie Flower](https://fonts.google.com/specimen/Indie+Flower?query=indie+flower)**,  **[Ubuntu Mono](https://fonts.google.com/specimen/Ubuntu+Mono?query=Ubuntu+mono)**, **[ABeeZee](https://fonts.google.com/specimen/ABeeZee?query=ABeeZee)**, **[Nunito](https://fonts.google.com/specimen/Nunito?query=Nunito)**, **[Varela Round](https://fonts.google.com/specimen/Varela+Round?query=Varela+Round)**, **[Hubballi](https://fonts.google.com/specimen/Hubballi?query=Hubballi)**
+
+## 🦸‍♀️ Autora
+
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/85723209?v=4" width="100px;" alt="avatar-picture"/>
+ <b>Dandara Dias</b> 🎀
+ 
+[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white&link=https://www.linkedin.com/in/dandara-dias/)](https://www.linkedin.com/in/dandara-dias/) 
+<a href = "mailto:dandaradias.contato@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
