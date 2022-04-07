@@ -5,7 +5,7 @@
 <p align="center">⚽ Aplicação responsável pela serie A do campeonato TFC - Trybe Futebol Clube ⚽ Em construção 🚧</p>
 
 <p align="center">
- <a href="#-sobre-o-projeto">Sobre</a> •
+• <a href="#-sobre-o-projeto">Sobre</a> •
  <a href="#%EF%B8%8F-funcionalidades">Features</a> • 
  <a href="#-demonstra%C3%A7%C3%A3o">Demonstração</a> • 
 </p>
@@ -39,3 +39,7 @@ Esta é uma aplicação dockerizada em Node.js + Typescript usando o pacote sequ
   - [x] ver a classificação dos times quando visitantes 
 
 ## 🎨 Demonstração
+
+<p align="center">
+  <img alt="TFC-app" title="#TFC" src="tfc.gif" width="800px">
+</p>
