@@ -31,7 +31,7 @@ Esta é uma aplicação dockerizada em Node.js + Typescript usando o pacote sequ
     - [x] inserir partidas, desde que estas não sejam com times iguais ou com times não disponíveis na tabela 
     - [x] adicionar e editar partidas em andamento
     - [x] finalizar partidas em andamento 
-    - [x] adcionar partidas finalizadas
+    - [x] adicionar partidas finalizadas
 
 - [x] É possível acessar a área de classificação e:
   - [x] ver uma lista da classificação geral dos times
