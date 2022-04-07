@@ -94,6 +94,9 @@ $ npm run compose:up
 
 # A aplicação iniciará na porta 3000 - acesse http://localhost:3000 
 ```
+<p align="center">
+  <a href="https://github.com/dandara-dias/tfc-trybe-futebol-clube/blob/main/Insomnia_2022-04-07.json" target="_blank"><img src="https://insomnia.rest/images/run.svg" alt="Run in Insomnia"></a>
+</p>
 
 ## 🛠 Tecnologias
 
