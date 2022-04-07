@@ -25,9 +25,9 @@
   background: white;
   border: none;
   border-bottom: 1px solid #3d495c;
-  color: #c5c9ce;
+  color: #6E2594;
   cursor: pointer;
-  font-family: Verdana , Tahoma , sans-serif;
+  font-family: 'Ubuntu Mono', monospace;
   font-size: 14px;
   font-style: normal;
   height: 40px;
@@ -89,6 +89,7 @@
 .games-table thead tr {
   align-items: center;
   background: #f0f2f5;
+  font-family: 'ABeeZee', sans-serif;
   border-radius: 10px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -199,3 +200,6 @@
 .finished-game {
   background: #036b52;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&display=swap');

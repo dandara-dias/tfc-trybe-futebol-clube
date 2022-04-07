@@ -16,7 +16,7 @@
 
 .user-login-area form {
   align-items: center;
-  background: white;
+  background: #BBBBBF;
   border-radius: 10px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   display: flex;
@@ -31,8 +31,8 @@
   align-items: center;
   display: flex;
   flex-grow: 2;
-  font-family: Verdana , Tahoma , sans-serif;
-  font-size: 16px;
+  font-family: 'Indie Flower', cursive;
+  font-size: 35px;
   font-style: normal;
   font-weight: 700;
   text-align: center;
@@ -84,3 +84,5 @@
   font-style: normal;
   text-align: center;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
